@@ -1,0 +1,18 @@
+create_snapshots = true
+log_level = 'all'
+pager = 'less +G'
+stable_wait_iterations = 25
+retries_sleep = 180
+
+[syncable_paths.OneDrive]
+local_path = '~/OneDrive'
+remote_path = 'OneDrive:'
+no_check_updated = true
+min_time_between_syncs = 360
+auto_sync_filter = [
+  '+ Downloads/**.txt',
+  '- *',
+]
+post_sync_cmds = [
+  'systemctl is-active --quiet Sessen && sudo systemctl restart Sessen || true'
+]

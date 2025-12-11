@@ -1,0 +1,15 @@
+[{
+  "Name": "prbsync",
+  "Description": "automatically triggers PRBSync when files are saved",
+  "Tags": ["todo"],
+  "Website": "https://github.com/todo,
+  "Versions": [
+    {
+      "Version": "1.0.0",
+      "Url": "https://github.com/todo",
+      "Require": {
+        "micro": ">=2.0.0-1"
+      }
+    }
+  ]
+}]
