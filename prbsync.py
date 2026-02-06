@@ -876,8 +876,8 @@ def find_keyboard_shortcut():
   if shortcut:
     return shortcut
   if os.environ.get('XDG_SESSION_DESKTOP') == 'KDE':
-    xdg_config_home = os.environ.get('XDG_CONFIG_HOME') or '~/.config'
-    xdg_data_home = os.environ.get('XDG_DATA_HOME') or '~/.local/share'
+    xdg_config_home = os.environ.get('XDG_CONFIG_HOME', '~/.config')
+    xdg_data_home = os.environ.get('XDG_DATA_HOME', '~/.local/share')
     name = None
     try:
       with open(os.path.expanduser(os.path.join(xdg_config_home, 'kglobalshortcutsrc')), 'r') as f:
