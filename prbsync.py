@@ -32,7 +32,8 @@ DEFAULT_CONFIG = {
   'alert_tone':
     'sine=f=300:d=0.5[0];sine=f=500:d=0.5[1];[0][1]concat=n=2:v=0:a=1',
   'play_alert_sound_with_notification': True,
-  'alert_sound': '/usr/share/sounds/Oxygen-Im-Nudge.ogg',
+  'alert_sound':
+    '/usr/share/sounds/freedesktop/stereo/message-new-instant.oga',
   'show_alert_sound_errors': False,
   'snapshots_to_keep': 20,
   'disk_usage_path': '/',
