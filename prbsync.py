@@ -703,8 +703,8 @@ def auto_sync_path(name, path, always_check_remote, silent, state):
   lpath += '' if lpath.endswith(os.path.sep) else os.path.sep
   loglevel = 'silent' if silent else 'auto'
   start = time.time()
-  last_auto_sync = state.get(name + '_last_auto_sync_end') or 0
-  last_manual_sync = state.get(name + '_last_manual_sync_end') or 0
+  last_auto_sync = state.get(name + '_last_auto_sync_start') or 0
+  last_manual_sync = state.get(name + '_last_manual_sync_start') or 0
   if last_manual_sync > TIME_AT_SCRIPT_LAUNCH:
     log(loglevel, TR('Skipping {0} - a manual sync already occurred').format(name))
     return changed, manual_sync_due, list_files_matching_auto_sync_filter(path)
